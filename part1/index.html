@@ -14,11 +14,10 @@
         <button @click="pressButton(2)" :disabled="buttons[2]">Press to see dog</button>
         <button @click="pressButton(3)" :disabled="buttons[3]">Press to see dog</button>
         </div>
-
     <div v-if="imageShown">
         <img :src="dogImage" alt="Dog of the day">
     </div>
-
+    
 
     <script>
         const {createApp, ref} = Vue;
