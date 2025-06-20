@@ -86,7 +86,7 @@ router.get('/user-dogs', async (req, res) => {
     );
     res.json(rows);
   } catch (error) {
-    res.status(500).json({ error: '})
+    res.status(500).json({ error: 'Error getting dogs' })
   }
 })
 
