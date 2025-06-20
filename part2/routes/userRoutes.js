@@ -50,8 +50,9 @@ router.post('/login', async (req, res) => {
 
     res.json({
       message: 'successful login',
-    })
-  }
+      role: user.role
+    });
+  } else 
 
   try {
     const [rows] = await db.query(`
