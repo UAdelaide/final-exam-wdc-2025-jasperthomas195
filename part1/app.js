@@ -71,6 +71,4 @@ async function insertData() {
     } catch (err) {
         console.error('Error with inserting data:', err);
     }
-
-    }
 }
