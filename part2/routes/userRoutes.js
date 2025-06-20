@@ -53,8 +53,9 @@ router.post('/login', async (req, res) => {
       role: user.role
     });
   } else {
-    res.status(401).json({ error: })
+    res.status(401).json({ error: 'incorrect details' });
   }
+});
 
   try {
     const [rows] = await db.query(`
