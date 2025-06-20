@@ -107,4 +107,4 @@ app.get('api/walkrequests/open', async function(req,res) {
     }
 });
 
-app.get('api/dogs')
+app.get('api/walkers/summary/', async function)
