@@ -26,10 +26,11 @@ let db;
         host: 'localhost',
         user: 'root',
         password: '',
-        database: 'DogWalkService'
+        database: 'DogWalkService',
+        multipleStatements: true
       });
 
       const schemaSQL = fs.readFileSync(path.join(__dirname, 'part1', 'dogwalks.sql'), 'utf8');
       await db.query(schemaSQL);
 
-      await insertSampleData();
+      await insertData();
