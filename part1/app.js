@@ -107,4 +107,8 @@ app.get('api/walkrequests/open', async function(req,res) {
     }
 });
 
-app.get('api/walkers/summary/', async function)
+app.get('api/walkers/summary/', async function(req, res) {
+    try {
+        const[summary]
+    }
+}
