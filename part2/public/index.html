@@ -59,6 +59,7 @@
 
           if (response.ok) {
             const data = await response.json();
+            // redirect the user to their 
             if (data.role === 'owner') {
               window.location.href = 'owner-dashboard.html';
             } else if (data.role === 'walker') {
