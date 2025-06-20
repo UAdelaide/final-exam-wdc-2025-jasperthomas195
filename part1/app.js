@@ -75,7 +75,7 @@ async function insertData() {
 
 app.get('api/dogs', async function(req,res) {
     try {
-      var[dogs] = await db.execute(`
-        `)
+      const[dogs] = await db.execute(`
+        SELECT d.name AS dog_name, d.size`)
     }
 }
