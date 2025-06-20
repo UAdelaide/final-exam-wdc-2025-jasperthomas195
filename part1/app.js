@@ -125,6 +125,7 @@ app.get('api/walkers/summary/', async function(req, res) {
         LEFT JOIN WalkRatings rating ON walker.user_id = rating.walker_id
         WHERE walker.role = 'walker'
         GROUP BY walker.user_id
-        `
+        `);
+    res.status(500).json
     }
 }
