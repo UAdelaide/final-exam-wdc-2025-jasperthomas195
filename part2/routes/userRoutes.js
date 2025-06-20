@@ -39,7 +39,11 @@ router.get('/me', (req, res) => {
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
   const user = users.find(u =>
-  u.username === username && u.password === password)
+  u.username === username && u.password === password);
+
+  if (user) {
+    req.session
+  }
 
   try {
     const [rows] = await db.query(`
