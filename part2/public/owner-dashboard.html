@@ -119,7 +119,11 @@
           }
         }
 
-        async function logout
+        async function logout() {
+          try {
+            await fetch('api')
+          }
+        }
 
         onMounted(() => {
           loadWalks();
