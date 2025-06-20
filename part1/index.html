@@ -15,7 +15,8 @@
         <button @click="pressButton(3)" :disabled="buttons[3]">Press to see dog</button>
     </div>
 
-    
+    <div v-if="imageShown">
+        <img :src="dogImage" alt="Dog of the day">
 
     <script>
         const {createApp, ref, onMounted} = Vue;
