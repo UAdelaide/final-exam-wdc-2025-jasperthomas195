@@ -50,3 +50,59 @@ async function insertData() {
         ('lebronjames', 'lebron@example.com', 'hashed321', 'walker'),
         ('jasper', 'jasper@example.com', 'hashed987', 'owner')
       `);
+
+      await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size) VALUES
+        ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
+        ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
+        ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Sam', 'large'),
+        ((SELECT user_id FROM Users WHERE username = 'jasper'), 'Spot', 'medium'),
+        ((SELECT user_id FROM Users WHERE username = 'jasper'), 'Reggie', 'large')
+        `);
+
+      await db.execute(`
+        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
+        ((SELECT dog_id FROM Dogs WHERE name = 'Max' AND owner_id = (select user_id FROM Users WHERE username = 'alice123')), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+        ((SELECT dog_id FROM Dogs WHERE name = 'Bella' AND owner_id = (select user_id FROM Users WHERE username = 'carol123')), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+        ((SELECT dog_id FROM Dogs WHERE name = 'Spot' AND owner_id = (select user_id FROM Users WHERE username = 'jasper')), '2025-07-10 10:30:00', 15, 'Glenelg', 'open'),
+        ((SELECT dog_id FROM Dogs WHERE name = 'Reggie' AND owner_id = (select user_id FROM Users WHERE username = 'jasper')), '2025-08-10 11:30:00', 55, 'Elizabeth', 'accepted'),
+        ((SELECT dog_id FROM Dogs WHERE name = 'Reggie' AND owner_id = (select user_id FROM Users WHERE username = 'jasper')), '2025-09-10 12:30:00', 60, 'Glenunga', 'open')
+        `);
+    } catch (err) {
+        console.error('Error with inserting data:', err);
+    }
+}
+
+app.get('api/dogs', async function(req,res) {
+    try {
+        const[dogs] = await db.execute(`
+        SELECT dog.name AS dog_name, dog.size, owner.username AS owner_username
+        FROM Dogs Dog
+        JOIN Users owner ON dog.owner_id = owner.user_id
+        `);
+        res.json(dogs);
+    } catch (err) {
+        res.status(500).json({ error: 'Error getting dog data' });
+    }
+});
+
+app.get('api/walkrequests/open', async function(req,res) {
+    try {
+        const[requests] = await db.execute(`
+        SELECT
+        walkRequests.request_id,
+        dog.name AS dog_name,
+        walkRequests.requested_time,
+        walkRequests.duration_minutes,
+        walkRequests.location,
+        owner.username AS owner_username
+        FROM WalkRequests walkRequests
+        JOIN Dogs dog ON walkRequests.dog_id = dog.dog_id
+        JOIN Users owner ON dog.owner_id = owner.user_id
+        WHERE walkRequests.status = 'open'
+        `);
+        res.json(requests);
+    } catch (err) {
+        res.status(500).json({error: 'Error getting walk request data'});
+    }
+});
