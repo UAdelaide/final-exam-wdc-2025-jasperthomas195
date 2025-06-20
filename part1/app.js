@@ -34,5 +34,8 @@ let db;
       await db.query(schemaSQL);
 
       await insertData();
-      console.log('Database created successfully')
+      console.log('Database created successfully');
+    } catch (err) {
+        console
+    }
 })();
