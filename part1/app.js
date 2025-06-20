@@ -11,13 +11,8 @@ app.use(express.urlencoded({ extended: false }));
 
 let db;
 
-db = await mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'DogWalkService'
-});
+(async () => {
+    try {
+        
 
-const schemaSQL = fs.readFileSync(path.join(__dirname, 'part1', 'dogwalks.sql'), 'utf8');
-await db.query(schemaSQL);
 
