@@ -62,8 +62,8 @@
                 const pressButton = async (index) => {
                     buttons.value[index] = true;
                     const allRedPressed = redButton.every(i=>buttons.value[i]);
-                    
-                    if (buttons.value.every(val=>val)) {
+
+                    if (allRedPressed)) {
                         const res = await fetch('https://dog.ceo/api/breeds/image/random');
                         const data = await res.json();
                         dogImage.value = data.message;
