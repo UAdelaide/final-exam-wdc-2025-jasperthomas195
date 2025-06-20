@@ -52,7 +52,9 @@ router.post('/login', async (req, res) => {
       message: 'successful login',
       role: user.role
     });
-  } else 
+  } else {
+    res.status(401).json({ error: })
+  }
 
   try {
     const [rows] = await db.query(`
