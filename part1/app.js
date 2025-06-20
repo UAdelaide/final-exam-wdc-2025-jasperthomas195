@@ -128,6 +128,6 @@ app.get('api/walkers/summary/', async function(req, res) {
         `);
         res.json(summary);
     } catch (err) {
-    res.status(500).json({error: 'Error getting walker summary data'});
+        res.status(500).json({error: 'Error getting walker summary data'});
     }
-}
+});
