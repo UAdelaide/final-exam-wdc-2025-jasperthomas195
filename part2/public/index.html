@@ -47,7 +47,8 @@
               method: 'POST',
               headers: {'Content-type': 'application/json'},
               body: JSON.stringify(this.login)
-            })
+            });
+            const data = await
           }
         }
       }
