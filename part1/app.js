@@ -111,6 +111,7 @@ app.get('api/walkers/summary/', async function(req, res) {
     try {
         const[summary] = await db.execute(`
         SELECT
-        
+        walker.username AS walker_username,
+        COUNT()
     }
 }
