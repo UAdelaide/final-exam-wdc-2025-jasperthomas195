@@ -86,8 +86,9 @@ router.get('/user-dogs', async (req, res) => {
     );
     res.json(rows);
   } catch (error) {
-    res.status(500).json({ error: 'error getting dogs'})
+    res.status(500).json({ error: 'error getting dogs'});
   }
+});
 
 router.get('/', async (req, res) => {
   try {
