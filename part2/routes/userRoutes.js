@@ -69,6 +69,8 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ error: 'server error' });
   }
 });
+
+router.get(/)
   const user = users.find(u =>
   u.username === username && u.password === password);
 
