@@ -31,3 +31,5 @@ let db;
 
       const schemaSQL = fs.readFileSync(path.join(__dirname, 'part1', 'dogwalks.sql'), 'utf8');
       await db.query(schemaSQL);
+
+      await insertSampleData();
