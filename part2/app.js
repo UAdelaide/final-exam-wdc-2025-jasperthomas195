@@ -10,8 +10,8 @@ app.use(session({
     secret: process.env.SESSION_SECRET || 'secret_key',
     resave: false,
     saveUninitialized: true,
-    cookie: {secure:}
-}))
+    cookie: { secure: false }
+}));
 
 // Middleware
 app.use(express.json());
