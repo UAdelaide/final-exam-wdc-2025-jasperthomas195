@@ -63,6 +63,7 @@ router.post('/login', async (req, res) => {
       role: user.role
     };
 
+    // created a response based on the user's role
     res.json({
       message: 'successful login',
       role: user.role
