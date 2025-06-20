@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 
 // new middleware allowing for session configuration
-// saves each session
+// enables session management 
 app.use(session({
     secret: process.env.SESSION_SECRET || 'secret_key',
     resave: false,
