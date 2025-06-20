@@ -33,16 +33,9 @@
                         const res = await fetch('https://dog.ceo/api/breeds/image/random');
                         const data = await res.json();
                         dogImage.value = data.message;
-                        imageShown.value
+                        imageShown.value = true;
                     }
-                }
-
-
-                onMounted(async () => {
-                    const res = await fetch('https://dog.ceo/api/breeds/image/random');
-                    const data = await res.json();
-                    dogImage.value = data.message;
-                });
+                };
                 return {dogImage};
                 }
         }) .mount('#app');
