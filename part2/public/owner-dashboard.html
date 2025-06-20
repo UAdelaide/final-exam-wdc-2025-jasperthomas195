@@ -121,7 +121,8 @@
 
         async function logout() {
           try {
-            await fetch('api')
+            await fetch('/api/users/logout', {method: 'POST'});
+            window
           }
         }
 
