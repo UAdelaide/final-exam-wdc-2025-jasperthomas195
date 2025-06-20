@@ -29,7 +29,12 @@
 
                 const pressButton = async (iindex) => {
                     buttons.value[index] = true;
-                    if (buttons.value.every(val=>val))
+                    if (buttons.value.every(val=>val)) {
+                        const res = await fetch('https://dog.ceo/api/breeds/image/random');
+                        const data = await res.json();
+                        dogImage.value = data.message;
+                        imageShown.value
+                    }
                 }
 
 
