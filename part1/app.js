@@ -73,4 +73,6 @@ async function insertData() {
     }
 }
 
-app.get('api/dogs', async function(re,res))
+app.get('api/dogs', async function(req,res) {
+    
+}
