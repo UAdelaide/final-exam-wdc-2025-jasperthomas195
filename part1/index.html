@@ -20,9 +20,9 @@
                     const data = await res.json();
                     dogImage.value = data.message;
                 });
-                return dogImage;
+                return {dogImage};
                 }
-            }
+            } .mount()
         })
 
 
