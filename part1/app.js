@@ -68,6 +68,9 @@ async function insertData() {
         ((SELECT dog_id FROM Dogs WHERE name = 'Reggie' AND owner_id = (select user_id FROM Users WHERE username = 'jasper')), '2025-08-10 11:30:00', 55, 'Elizabeth', 'accepted'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Reggie' AND owner_id = (select user_id FROM Users WHERE username = 'jasper')), '2025-09-10 12:30:00', 60, 'Glenunga', 'open')
         `);
+    } catch (err) {
+        
+    }
 
     }
 }
