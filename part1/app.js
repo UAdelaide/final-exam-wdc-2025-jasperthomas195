@@ -40,4 +40,8 @@ let db;
     }
 })();
 
-async function insertData
+async function insertData() {
+    try {
+
+    }
+}
