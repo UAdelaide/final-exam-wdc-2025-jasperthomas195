@@ -109,6 +109,8 @@ app.get('api/walkrequests/open', async function(req,res) {
 
 app.get('api/walkers/summary/', async function(req, res) {
     try {
-        const[summary]
+        const[summary] = await db.execute(`
+        SELECT
+        
     }
 }
