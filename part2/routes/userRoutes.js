@@ -44,7 +44,9 @@ router.post('/login', async (req, res) => {
       [username]
     );
 
-    if (rows.length === 0 )
+    if (rows.length === 0) {
+      return res.status(401).json({ error:})
+    }
   }
   const user = users.find(u =>
   u.username === username && u.password === password);
