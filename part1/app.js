@@ -80,7 +80,10 @@ app.get('api/dogs', async function(req,res) {
         FROM Dogs Dog
         JOIN Users owner ON dog.owner_id = owner.user_id
         `);
-      res.json(dogs)
+      res.json(dogs);
+    } catch (err) {
+        res.status
+    }
 
     }
 }
