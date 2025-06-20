@@ -96,6 +96,7 @@
             // get request to get the user's dogs
             const res = await fetch('/api/users/user-dogs');
             if (!res.ok) throw new error('failed to load dogs');
+            // parse the JSON
             dogs.value = await res.json();
           } catch (error) {
             error.value = error.message;
