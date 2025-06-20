@@ -101,6 +101,7 @@ app.get('api/walkrequests/open', async function(req,res) {
         JOIN Users owner ON dog.owner_id = owner.user_id
         WHERE walkRequests.status = 'open'
         `);
+        
 
 
 
