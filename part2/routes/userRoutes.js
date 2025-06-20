@@ -51,9 +51,10 @@ router.post('/login', async (req, res) => {
     const user = rows[0];
 
     if (password !== user.password_hash) {
-      return res.status(401).json({ error: })
-
+      return res.status(401).json({ error: 'incorrect details'});
     }
+
+    
   }
   const user = users.find(u =>
   u.username === username && u.password === password);
