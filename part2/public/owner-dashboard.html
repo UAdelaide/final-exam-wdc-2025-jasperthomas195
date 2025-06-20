@@ -122,8 +122,8 @@
         async function logout() {
           try {
             await fetch('/api/users/logout', {method: 'POST'});
-            window
-          }
+            window.location.href = '/';
+          } catch (error)
         }
 
         onMounted(() => {
