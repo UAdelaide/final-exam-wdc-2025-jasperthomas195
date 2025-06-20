@@ -40,11 +40,12 @@ router.get('/me', (req, res) => {
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
   try {
+    // added a database query for authentication
     const [rows] = await db.query(
       'SELECT user_id, username, password_hash, role FROM Users WHERE username = ?',
       [username]
     );
-
+    //
     if (rows.length === 0) {
       return res.status(401).json({ error: "incorrect details"});
     }
