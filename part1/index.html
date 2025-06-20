@@ -57,7 +57,7 @@
                 const dogImage = ref('');
                 const buttons = ref(new Array(21).fill(false));
                 const imageShown = ref(false);
-                const ind
+                const redButton = [0,3,6,9,12,15,18];
 
                 const pressButton = async (index) => {
                     buttons.value[index] = true;
