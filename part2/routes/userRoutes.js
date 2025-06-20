@@ -65,7 +65,7 @@ router.post('/login', async (req, res) => {
       role: user.role
     });
   } catch (error) {
-    console.error
+    console.error('login')
   }
   const user = users.find(u =>
   u.username === username && u.password === password);
