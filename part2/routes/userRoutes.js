@@ -56,8 +56,11 @@ router.post('/login', async (req, res) => {
 
     req.session_user = {
       id: user.user_id,
-      username
-    }
+      username: user.username,
+      role: user.role
+    };
+
+    res.json
   }
   const user = users.find(u =>
   u.username === username && u.password === password);
