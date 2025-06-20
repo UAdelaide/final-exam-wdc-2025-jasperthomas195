@@ -25,7 +25,8 @@
             setup() {
                 const dogImage = ref('');
                 const buttons = ref([false, false, false, false]);
-                const imageShown
+                const imageShown = ref(false);
+                const pressButton = async (iindex)
                 onMounted(async () => {
                     const res = await fetch('https://dog.ceo/api/breeds/image/random');
                     const data = await res.json();
