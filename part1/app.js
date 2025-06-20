@@ -86,4 +86,4 @@ app.get('api/dogs', async function(req,res) {
     }
 });
 
-app.get('api/', async function(req,res) {
+app.get('api/walkrequests/open', async function(req,res) {
