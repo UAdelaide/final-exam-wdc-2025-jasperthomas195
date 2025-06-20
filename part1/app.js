@@ -16,9 +16,9 @@ let db;
         const connection = await mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: '' // Set your MySQL password
-          });
-          
+            password: ''
+        });
+
         db = await mysql.createConnection({
             host: 'localhost',
             user: 'root',
