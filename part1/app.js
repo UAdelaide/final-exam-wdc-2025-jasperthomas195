@@ -113,6 +113,7 @@ app.get('api/walkers/summary/', async function(req, res) {
         SELECT
         walker.username AS walker_username,
         COUNT(rating.rating_id) AS total_ratings,
-        AVG(rating.average)
+        AVG(rating.rating) AS average_rating,
+        COUNT(D)
     }
 }
