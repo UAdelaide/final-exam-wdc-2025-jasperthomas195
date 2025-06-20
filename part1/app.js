@@ -74,7 +74,7 @@ async function insertData() {
     }
 }
 
-app.get('api/dogs', async function(req,res) {
+app.get('/api/dogs', async function(req,res) {
     try {
         const[dogs] = await db.execute(`
         SELECT dog.name AS dog_name, dog.size, owner.username AS owner_username
@@ -87,7 +87,7 @@ app.get('api/dogs', async function(req,res) {
     }
 });
 
-app.get('api/walkrequests/open', async function(req,res) {
+app.get('/api/walkrequests/open', async function(req,res) {
     try {
         const[requests] = await db.execute(`
         SELECT
@@ -108,7 +108,7 @@ app.get('api/walkrequests/open', async function(req,res) {
     }
 });
 
-app.get('api/walkers/summary/', async function(req, res) {
+app.get('/api/walkers/summary/', async function(req, res) {
     try {
         const[summary] = await db.execute(`
         SELECT
