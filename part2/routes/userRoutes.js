@@ -45,17 +45,18 @@ router.post('/login', async (req, res) => {
       'SELECT user_id, username, password_hash, role FROM Users WHERE username = ?',
       [username]
     );
-    //
+    // checking for user existence
     if (rows.length === 0) {
       return res.status(401).json({ error: "incorrect details"});
     }
 
     const user = rows[0];
-
+    // new password verification
     if (password !== user.password_hash) {
       return res.status(401).json({ error: 'incorrect details'});
     }
 
+    
     req.session_user = {
       id: user.user_id,
       username: user.username,
