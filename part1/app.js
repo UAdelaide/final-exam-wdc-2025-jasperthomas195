@@ -114,6 +114,7 @@ app.get('api/walkers/summary/', async function(req, res) {
         walker.username AS walker_username,
         COUNT(rating.rating_id) AS total_ratings,
         AVG(rating.rating) AS average_rating,
-        COUNT(D)
+        COUNT(DISTINCT CASE
+            WHEN app.status = 'accepted' AND 
     }
 }
