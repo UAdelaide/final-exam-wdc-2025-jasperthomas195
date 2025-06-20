@@ -85,7 +85,8 @@ router.get('/user-dogs', async (req, res) => {
       [ownerId]
     );
     res.json(rows);
-    
+  } catch (error) {
+    res.status(500).json
   }
 })
 
