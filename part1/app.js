@@ -39,3 +39,5 @@ let db;
         console.error('Error creating database', err);
     }
 })();
+
+async function insertData
