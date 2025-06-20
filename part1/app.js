@@ -82,8 +82,6 @@ app.get('api/dogs', async function(req,res) {
         `);
       res.json(dogs);
     } catch (err) {
-        res.status(500).json({ error: 'Error getting dog data' })
+        res.status(500).json({ error: 'Error getting dog data' });
     }
-
-    }
-}
+});
