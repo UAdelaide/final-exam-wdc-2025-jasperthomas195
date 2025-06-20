@@ -89,7 +89,7 @@
 
         async function loadDogs() {
           try {
-            const res = await fetch('/api/users/user-dogs');
+            const res = await fetch('/api/dogs');
             dogs.value = await res.json();
         } catch (error) {
           error.value = err.message;
@@ -154,8 +154,7 @@
           message,
           error,
           submitWalkRequest,
-          logout, // logout added to return methods
-          dogs
+          logout // logout added to return methods
         };
       }
     }).mount('#app');
