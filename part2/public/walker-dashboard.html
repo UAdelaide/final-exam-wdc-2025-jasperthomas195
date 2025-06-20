@@ -81,15 +81,13 @@
           // creation of logout function
         async function logout() {
           try {
-          // send POST logout endpoint
-          await fetch('/api/users/logout', {method: 'POST'});
-          //redirect to homepage
-          window.location.href = '/';
-        } catch (error) {
-          alert('failed to log out');
-        }
-
-
+            // send POST logout endpoint
+            await fetch('/api/users/logout', {method: 'POST'});
+            //redirect to homepage
+            window.location.href = '/';
+          } catch (error) {
+            alert('failed to log out');
+          }
         }
 
         onMounted(() => {
