@@ -80,7 +80,7 @@
 
           // creation of logout function
           async function logout() {
-          try {
+            try {
             // send POST logout endpoint
             await fetch('/api/users/logout', {method: 'POST'});
             //redirect to homepage
@@ -88,6 +88,8 @@
           } catch (error) {
             alert('failed to log out');
           }
+
+
         }
 
         onMounted(() => {
