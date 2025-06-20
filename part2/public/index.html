@@ -14,7 +14,7 @@
     <form @submit.prevent="login">
       <div class="mb-4">
         <label class="form-label">Username</label>
-        <input 
+        <input v-model="loginForm.username" type="text" class="formControl"
 
       </div>
   </div>
