@@ -9,7 +9,8 @@ const app = express();
 app.use(session({
     secret: process.env.SESSION_SECRET || 'secret_key',
     resave: false,
-    
+    saveUninitialized: true,
+    cookie: {secure:}
 }))
 
 // Middleware
