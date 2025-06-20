@@ -74,7 +74,9 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/my-dogs', async (req, res))
+router.get('/my-dogs', async (req, res) ==> {
+  
+})
 
 router.get('/', async (req, res) => {
   try {
