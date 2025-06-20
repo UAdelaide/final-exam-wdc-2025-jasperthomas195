@@ -93,6 +93,7 @@
         // define function to fetch owner's dogs from the backend
         async function loadDogs() {
           try {
+            // get request to get the user's dogs
             const res = await fetch('/api/users/user-dogs');
             if (!res.ok) throw new error('failed to load dogs');
             dogs.value = await res.json();
