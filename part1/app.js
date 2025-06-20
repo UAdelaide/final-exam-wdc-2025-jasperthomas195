@@ -106,3 +106,5 @@ app.get('api/walkrequests/open', async function(req,res) {
         res.status(500).json({error: 'Error getting walk request data'});
     }
 });
+
+app.get('api/dogs')
