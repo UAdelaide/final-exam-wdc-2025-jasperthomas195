@@ -84,6 +84,8 @@ router.get('/user-dogs', async (req, res) => {
       'SELECT dog_id, name, size FROM Dogs WHERE owner_id = ?',
       [ownerId]
     );
+    res.json(rows);
+  } catch (error) {
     
   }
 
