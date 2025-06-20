@@ -15,12 +15,12 @@
 
     <div>
       <h2 class="h4 mb-3">Login</h2>
-      <!-- new error message
+      <!-- new error message -->
       <div v-if="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
       <form @submit.prevent="login">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
-          // added an input box for the user's username
+          <!--added an input box for the user's username-->
           <input type="text" class="form-control" id="username" v-model="username" required>
         </div>
         <div class="mb-3">
