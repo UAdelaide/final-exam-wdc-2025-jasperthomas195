@@ -84,6 +84,7 @@ router.get('/user-dogs', async (req, res) => {
     // get the user's id
     const ownerId = req.session.user.id;
     const [rows] = await db.query(
+      // sql query to get the dogs from specific user
       'SELECT dog_id, name, size FROM Dogs WHERE owner_id = ?',
       [ownerId]
     );
