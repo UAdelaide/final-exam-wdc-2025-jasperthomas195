@@ -74,6 +74,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// 
 router.get('/user-dogs', async (req, res) => {
   if (!req.session.user || req.session.role !== 'owner') {
     return res.status(401).json({ error: 'unauthorised '});
@@ -86,9 +87,9 @@ router.get('/user-dogs', async (req, res) => {
     );
     res.json(rows);
   } catch (error) {
-    res.status(500).json({ error: 'Error getting dogs' })
+    res.status(500).json({ error: 'Error getting dogs' });
   }
-})
+});
 
 router.get('/', async (req, res) => {
   try {
