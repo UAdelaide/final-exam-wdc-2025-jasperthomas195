@@ -34,3 +34,4 @@ let db;
       await db.query(schemaSQL);
 
       await insertData();
+      console.log()
