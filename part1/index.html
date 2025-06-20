@@ -20,10 +20,11 @@
     </div>
 
     <script>
-        const {createApp, ref, onMounted} = Vue;
+        const {createApp, ref} = Vue;
         createApp({
             setup() {
                 const dogImage = ref('');
+                const buttons
                 onMounted(async () => {
                     const res = await fetch('https://dog.ceo/api/breeds/image/random');
                     const data = await res.json();
