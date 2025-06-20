@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>Dog of the day</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src='https://unpkg.com/vue@3/dist/vue.global.prod.js'></script>
 </head>
 <body>
-    <div id="app">
+    <div id='app'>
         <h1>Dog of the day!</h1>
-        <div v-if=""!imageShown"></div>
+        <div v-if="!imageShown"></div>
         <img :src="dogImage" alt="Dog of the day">
 
     </div>
