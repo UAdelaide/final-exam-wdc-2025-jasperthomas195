@@ -45,7 +45,7 @@
         <button @click="pressButton(20)" :disabled="buttons[20]" class="button"></button>
         </div>
 
-        <div v-if="imageShown">
+        <div v-if="dog">
             <img :src="i" alt="Dog of the day">
         </div>
     </div>
@@ -56,7 +56,7 @@
             setup() {
                 const i = ref('');
                 const buttons = ref(new Array(21).fill(false));
-                const imageShown = ref(false);
+                const dog = ref(false);
                 const redButton = [0,3,6,9,12,15,18];
 
                 const pressButton = async (index) => {
@@ -67,7 +67,7 @@
                         const res = await fetch('https://dog.ceo/api/breeds/image/random');
                         const data = await res.json();
                         i.value = data.message;
-                        imageShown.value = true;
+                        dog.value = true;
                     }
                 };
                 return {i, buttons, dog, pressButton};
