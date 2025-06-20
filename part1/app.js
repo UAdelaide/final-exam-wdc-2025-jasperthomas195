@@ -117,6 +117,8 @@ app.get('api/walkers/summary/', async function(req, res) {
         COUNT(DISTINCT CASE
             WHEN app.status = 'accepted' AND req.status = 'completed'
             THEN req.request_id
-            ELSE null
+            ELSE NULL
+        END) AS completed_walks
+        FROM 
     }
 }
