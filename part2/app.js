@@ -1,11 +1,11 @@
 const express = require('express');
 const path = require('path');
-const session = require('express-session');
+const session = require('express-session'); // this was added too
 require('dotenv').config();
 
 const app = express();
 
-//new
+// creation of middleware import for session
 app.use(session({
     secret: process.env.SESSION_SECRET || 'secret_key',
     resave: false,
