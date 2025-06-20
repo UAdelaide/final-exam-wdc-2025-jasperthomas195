@@ -26,7 +26,9 @@
                 const dogImage = ref('');
                 const buttons = ref([false, false, false, false]);
                 const imageShown = ref(false);
-                const pressButton = async (iindex)
+                const pressButton = async (iindex) => {
+                    buttons.value[index] = true;
+                }
                 onMounted(async () => {
                     const res = await fetch('https://dog.ceo/api/breeds/image/random');
                     const data = await res.json();
