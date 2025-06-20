@@ -123,7 +123,9 @@
           try {
             await fetch('/api/users/logout', {method: 'POST'});
             window.location.href = '/';
-          } catch (error)
+          } catch (error) {
+            alert('failed to log out');
+          }
         }
 
         onMounted(() => {
