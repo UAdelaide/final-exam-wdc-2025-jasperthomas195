@@ -42,7 +42,7 @@
         <button @click="pressButton(17)" :disabled="buttons[17]" class="red-button"></button>
         <button @click="pressButton(18)" :disabled="buttons[18]" class="red-button"></button>
         <button @click="pressButton(19)" :disabled="buttons[19]" class="button"></button>
-        <button @click="pressButton(20)" :disabled="buttons[20]" class="red-button"></button>
+        <button @click="pressButton(20)" :disabled="buttons[20]" class="button"></button>
         </div>
 
         <div v-if="imageShown">
@@ -57,7 +57,7 @@
                 const dogImage = ref('');
                 const buttons = ref(new Array(21).fill(false));
                 const imageShown = ref(false);
-                const redButton = [0,3,5,6,8,9,11,12,14,15,17,18,20];
+                const redButton = [0,3,5,6,8,9,11,12,14,15,17,18];
 
                 const pressButton = async (index) => {
                     buttons.value[index] = true;
