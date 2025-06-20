@@ -90,7 +90,8 @@
         async function loadDogs() {
           try {
             const res = await fetch('/api/users/user-dogs');
-            if (!res.ok) throw new error()
+            if (!res.ok) throw new error('failed to load dogs');
+            dogs.value = await res.json();
           }
         }
 
