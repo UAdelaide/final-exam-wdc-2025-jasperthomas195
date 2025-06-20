@@ -131,3 +131,5 @@ app.get('api/walkers/summary/', async function(req, res) {
         res.status(500).json({error: 'Error getting walker summary data'});
     }
 });
+
+module.exports = app;
