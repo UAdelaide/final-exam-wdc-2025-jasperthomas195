@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'incorrect details'});
     }
 
-    
+    // created for seperate sessions
     req.session_user = {
       id: user.user_id,
       username: user.username,
