@@ -79,7 +79,7 @@ router.get('/user-dogs', async (req, res) => {
     return res.status(401).json({ error: 'unauthorised '});
   }
   try {
-    const
+    const ownerId = req.session.user
   }
 })
 
