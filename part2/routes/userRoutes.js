@@ -70,7 +70,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get(/)
+router.get('/', async (req, res) => )
   const user = users.find(u =>
   u.username === username && u.password === password);
 
