@@ -9,10 +9,13 @@
     .button {
         padding: 30px 120px;
     }
+    h1 {
+        
+    }
 </style>
 <body>
     <div id="app">
-        <small>Click the buttons to see the dog</small>
+        <h1>Click the buttons to see the dog</h1>
 
         <div v-if="!imageShown">
         <button @click="pressButton(0)" :disabled="buttons[0]" class="button"></button>
