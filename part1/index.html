@@ -21,7 +21,7 @@
     <div id="app">
         <h1>Click all the red buttons to see the dog</h1>
 
-        <div v-if="!imageShown">
+        <div v-if="!dog">
         <button @click="pressButton(0)" :disabled="buttons[0]" class="red-button"></button>
         <button @click="pressButton(1)" :disabled="buttons[1]" class="button"></button>
         <button @click="pressButton(2)" :disabled="buttons[2]" class="button"></button>
@@ -46,7 +46,7 @@
         </div>
 
         <div v-if="imageShown">
-            <img :src="dogImage" alt="Dog of the day">
+            <img :src="i" alt="Dog of the day">
         </div>
     </div>
 
@@ -70,7 +70,7 @@
                         imageShown.value = true;
                     }
                 };
-                return {i, buttons, imageShown, pressButton};
+                return {i, buttons, dog, pressButton};
                 }
         }).mount('#app');
     </script>
