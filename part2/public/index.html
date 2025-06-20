@@ -52,7 +52,9 @@
             })
           });
 
-          if response
+          if (response.ok) {
+            const data = await response.json
+          }
         }
       }
     }).mount('#app');
