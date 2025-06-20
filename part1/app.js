@@ -49,7 +49,8 @@ async function insertData() {
         ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
         ('lebronjames', 'lebron@example.com', 'hashed321', 'walker'),
-        ('jasper', 'jasper@example.com', 'hashed987', 'owner');')
+        ('jasper', 'jasper@example.com', 'hashed987', 'owner')
+        
 
     }
 }
