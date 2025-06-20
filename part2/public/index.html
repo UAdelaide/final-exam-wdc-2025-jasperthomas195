@@ -48,7 +48,10 @@
               headers: {'Content-type': 'application/json'},
               body: JSON.stringify(this.login)
             });
-            const data = await
+            const data = await response.json();
+            if (!response.ok) {
+              this.error
+            }
           }
         }
       }
