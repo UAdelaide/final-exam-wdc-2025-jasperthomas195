@@ -24,7 +24,8 @@
         createApp({
             setup() {
                 const dogImage = ref('');
-                const buttons
+                const buttons = ref([false, false, false, false]);
+                const imageShown
                 onMounted(async () => {
                     const res = await fetch('https://dog.ceo/api/breeds/image/random');
                     const data = await res.json();
