@@ -51,8 +51,10 @@
             const data = await response.json();
             if (!response.ok) {
               this.error = data.error || 'login failed';
-              return
+              return;
             }
+            this.error = '';
+            if (data.role) 
           }
         }
       }
