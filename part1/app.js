@@ -22,10 +22,12 @@ let db;
       await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
       await connection.end();
 
-      // Now connect to the created database
       db = await mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: '',
         database: 'DogWalkService'
       });
+
+      const schemaSQL = fs.readFileSync(path.join(__dirname, 'part1', 'dogwalks.sql'), 'utf8');
+      await db.query(schemaSQL);
