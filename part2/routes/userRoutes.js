@@ -66,8 +66,9 @@ router.post('/login', async (req, res) => {
     });
   } catch (error) {
     console.error('login error', error);
-    res.status(500).json({})
+    res.status(500).json({ error: 'server error' });
   }
+});
   const user = users.find(u =>
   u.username === username && u.password === password);
 
