@@ -88,7 +88,9 @@ app.get('api/dogs', async function(req,res) {
 
 app.get('api/walkrequests/open', async function(req,res) {
     try {
+        const[requests] = await
         SELECT
         wr.request_id,
-        dog.name AS 
+        dog.name AS dog_name,
+
     }
