@@ -90,6 +90,7 @@
         const error = ref('');
         const dogs = ref([]);
 
+        // define function to fetch 
         async function loadDogs() {
           try {
             const res = await fetch('/api/users/user-dogs');
