@@ -75,6 +75,6 @@ async function insertData() {
 
 app.get('api/dogs', async function(req,res) {
     try {
-      var[dogs] = await
+      var[dogs] = await db.execute(``)
     }
 }
