@@ -46,7 +46,84 @@
         </div>
 
         <div v-if="imageShown">
-            <img :src="dogImage" alt="Dog of the day">
+            <img :src="<!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Dog of the day</title>
+                <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+            </head>
+            <style>
+                .button {
+                    padding: 30px 120px;
+                }
+                h1 {
+                    font-size: 5px;
+                }
+                .red-button {
+                    padding: 30px 120px;
+                    background-color: red;
+                }
+            </style>
+            <body>
+                <div id="app">
+                    <h1>Click all the red buttons to see the dog</h1>
+
+                    <div v-if="!imageShown">
+                    <button @click="pressButton(0)" :disabled="buttons[0]" class="red-button"></button>
+                    <button @click="pressButton(1)" :disabled="buttons[1]" class="button"></button>
+                    <button @click="pressButton(2)" :disabled="buttons[2]" class="button"></button>
+                    <button @click="pressButton(3)" :disabled="buttons[3]" class="red-button"></button>
+                    <button @click="pressButton(4)" :disabled="buttons[4]" class="button"></button>
+                    <button @click="pressButton(5)" :disabled="buttons[5]" class="button"></button>
+                    <button @click="pressButton(6)" :disabled="buttons[6]" class="red-button"></button>
+                    <button @click="pressButton(7)" :disabled="buttons[7]" class="button"></button>
+                    <button @click="pressButton(8)" :disabled="buttons[8]" class="button"></button>
+                    <button @click="pressButton(9)" :disabled="buttons[9]" class="red-button"></button>
+                    <button @click="pressButton(10)" :disabled="buttons[10]" class="button"></button>
+                    <button @click="pressButton(11)" :disabled="buttons[11]" class="button"></button>
+                    <button @click="pressButton(12)" :disabled="buttons[12]" class="red-button"></button>
+                    <button @click="pressButton(13)" :disabled="buttons[13]" class="button"></button>
+                    <button @click="pressButton(14)" :disabled="buttons[14]" class="button"></button>
+                    <button @click="pressButton(15)" :disabled="buttons[15]" class="red-button"></button>
+                    <button @click="pressButton(16)" :disabled="buttons[16]" class="button"></button>
+                    <button @click="pressButton(17)" :disabled="buttons[17]" class="button"></button>
+                    <button @click="pressButton(18)" :disabled="buttons[18]" class="red-button"></button>
+                    <button @click="pressButton(19)" :disabled="buttons[19]" class="button"></button>
+                    <button @click="pressButton(20)" :disabled="buttons[20]" class="button"></button>
+                    </div>
+
+                    <div v-if="imageShown">
+                        <img :src="dogImage" alt="Dog of the day">
+                    </div>
+                </div>
+
+                <script>
+                    const {createApp, ref} = Vue;
+                    createApp({
+                        setup() {
+                            const dogImage = ref('');
+                            const buttons = ref(new Array(21).fill(false));
+                            const imageShown = ref(false);
+                            const redButton = [0,3,6,9,12,15,18];
+
+                            const pressButton = async (index) => {
+                                buttons.value[index] = true;
+                                const allRedPressed = redButton.every(i=>buttons.value[i]);
+
+                                if (allRedPressed) {
+                                    const res = await fetch('https://dog.ceo/api/breeds/image/random');
+                                    const data = await res.json();
+                                    dogImage.value = data.message;
+                                    imageShown.value = true;
+                                }
+                            };
+                            return {dogImage, buttons, imageShown, pressButton};
+                            }
+                    }).mount('#app');
+                </script>
+            </body>
+            </html>" alt="Dog of the day">
         </div>
     </div>
 
@@ -66,11 +143,11 @@
                     if (allRedPressed) {
                         const res = await fetch('https://dog.ceo/api/breeds/image/random');
                         const data = await res.json();
-                        dogImage.value = data.message;
+                        i.value = data.message;
                         imageShown.value = true;
                     }
                 };
-                return {dogImage, buttons, imageShown, pressButton};
+                return {i, buttons, imageShown, pressButton};
                 }
         }).mount('#app');
     </script>
