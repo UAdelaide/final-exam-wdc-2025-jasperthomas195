@@ -81,7 +81,6 @@ app.get('api/dogs', async function(req,res) {
         JOIN Users owner ON dog.owner_id = owner.user_id
         `);
         res.json(dogs);
-        
     } catch (err) {
         res.status(500).json({ error: 'Error getting dog data' });
     }
