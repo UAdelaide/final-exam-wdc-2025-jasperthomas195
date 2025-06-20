@@ -38,6 +38,9 @@ router.get('/me', (req, res) => {
 // POST login (dummy version)
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
+  try {
+    
+  }
   const user = users.find(u =>
   u.username === username && u.password === password);
 
