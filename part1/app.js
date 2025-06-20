@@ -43,5 +43,7 @@ let db;
 async function insertData() {
     try {
 
+        
+
     }
 }
