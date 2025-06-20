@@ -63,7 +63,7 @@
                     buttons.value[index] = true;
                     const allRedPressed = redButton.every(i=>buttons.value[i]);
 
-                    if (allRedPressed)) {
+                    if (allRedPressed) {
                         const res = await fetch('https://dog.ceo/api/breeds/image/random');
                         const data = await res.json();
                         dogImage.value = data.message;
