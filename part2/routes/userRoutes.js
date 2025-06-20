@@ -48,6 +48,8 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: "incorrect details"});
     }
 
+    const user = rows[0];
+
     
   }
   const user = users.find(u =>
