@@ -16,4 +16,7 @@ db = await mysql.createConnection({
     user: 'root',
     password: '',
     database: 'DogWalkService'
-  });
+});
+
+const schemaSQL = fs.readFileSync(path.join(__dirname, 'part1', 'dogwalks.sql'), 'utf8');
+await db.query(schemaSQL);
