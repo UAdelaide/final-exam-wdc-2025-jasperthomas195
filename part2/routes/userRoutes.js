@@ -75,7 +75,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/my-dogs', async (req, res) ==> {
-  
+  if (!req.session.user || )
 })
 
 router.get('/', async (req, res) => {
