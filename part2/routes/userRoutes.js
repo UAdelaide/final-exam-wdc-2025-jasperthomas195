@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
     }
 
     // created for seperate sessions
-    req.session_user = {
+    req.session.user = {
       id: user.user_id,
       username: user.username,
       role: user.role
