@@ -10,6 +10,9 @@
         <h1>Dog of the day!</h1>
         <div v-if="!imageShown"></div>
         <button @click="pressButton(0)" :disabled="buttons[0]">Press to see dog</button>
+        <button @click="pressButton(1)" :disabled="buttons[1]">Press to see dog</button>
+        <button @click="pressButton(2)" :disabled="buttons[2]">Press to see dog</button>
+        <button @click="pressButton(3)" :disabled="buttons[3]">Press to see dog</button>
         <img :src="dogImage" alt="Dog of the day">
 
     </div>
