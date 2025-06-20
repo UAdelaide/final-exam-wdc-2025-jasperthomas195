@@ -55,8 +55,9 @@
         createApp({
             setup() {
                 const dogImage = ref('');
-                const buttons = ref(new Array(21).fill)
+                const buttons = ref(new Array(21).fill(false));
                 const imageShown = ref(false);
+                const ind
 
                 const pressButton = async (index) => {
                     buttons.value[index] = true;
