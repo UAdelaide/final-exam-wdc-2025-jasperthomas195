@@ -75,9 +75,9 @@ router.get('/', async (req, res) => {
     const [rows] = await db.query('SELECT user_id, username, email, role FROM Users');
     res.json(rows);
   } catch (error) {
-    res.status(500).
+    res.status(500).json({ error: 'user failure' });
   }
-})
+});
   const user = users.find(u =>
   u.username === username && u.password === password);
 
