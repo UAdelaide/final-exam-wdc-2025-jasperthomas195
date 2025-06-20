@@ -7,7 +7,9 @@ const app = express();
 
 //new
 app.use(session({
-    secret: process.env.SESSION_SECRET || 
+    secret: process.env.SESSION_SECRET || 'secret_key',
+    resave: false,
+    
 }))
 
 // Middleware
