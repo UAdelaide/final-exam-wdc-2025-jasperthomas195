@@ -120,6 +120,7 @@ app.get('api/walkers/summary/', async function(req, res) {
             ELSE NULL
         END) AS completed_walks
         FROM Users walker
-        LEFT JOIN WalkApplications app ON walker.user_id
+        LEFT JOIN WalkApplications app ON walker.user_id = app.walker_id
+        
     }
 }
