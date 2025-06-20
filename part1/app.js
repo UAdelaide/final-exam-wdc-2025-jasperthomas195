@@ -72,3 +72,5 @@ async function insertData() {
         console.error('Error with inserting data:', err);
     }
 }
+
+app.get('api/dogs', async function(re,res))
