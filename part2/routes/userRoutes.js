@@ -74,6 +74,9 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/user-dogs', async (req, res) => {
+  if (!req.)
+
 router.get('/', async (req, res) => {
   try {
     const [rows] = await db.query('SELECT user_id, username, email, role FROM Users');
