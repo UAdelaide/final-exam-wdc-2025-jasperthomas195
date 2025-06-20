@@ -3,13 +3,14 @@ const path = require('path');
 const mysql = require('mysql2/promise');
 var logger = require('morgan');
 const fs = require('fs');
+var path = require()
 
 const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static)
+app.use(express.static(__dirname));
 
 let db;
 
