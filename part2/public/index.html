@@ -62,7 +62,9 @@
           } else {
             this.errorMessage = 'Incorrect username or password'
           }
-        } catch (error)
+        } catch (error) {
+          this.errorMessage = 'Login failed'
+        }
       }
     }).mount('#app');
   </script>
