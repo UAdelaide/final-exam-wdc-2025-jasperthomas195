@@ -52,8 +52,8 @@
               method: 'POST', // sends a POST request to the login endpoint, with username and password
               headers: {'Content-type': 'application/json'},
               body: JSON.stringify({
-                username: this.username,
-                password: this.password
+                username: this.username, // include the username from the input
+                password: this.password // include the password from the input
             })
           });
 
