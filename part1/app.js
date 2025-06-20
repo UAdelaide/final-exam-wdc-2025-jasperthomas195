@@ -36,6 +36,6 @@ let db;
       await insertData();
       console.log('Database created successfully');
     } catch (err) {
-        console.error('Error creating database')
+        console.error('Error creating database', err);
     }
 })();
