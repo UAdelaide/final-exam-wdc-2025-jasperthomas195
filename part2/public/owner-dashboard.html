@@ -90,7 +90,7 @@
         const error = ref('');
         const dogs = ref([]);
 
-        // define function to fetch 
+        // define function to fetch owner's dogs from the backend
         async function loadDogs() {
           try {
             const res = await fetch('/api/users/user-dogs');
