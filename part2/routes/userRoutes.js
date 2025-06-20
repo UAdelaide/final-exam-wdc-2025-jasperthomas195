@@ -60,7 +60,10 @@ router.post('/login', async (req, res) => {
       role: user.role
     };
 
-    res.json
+    res.json({
+      message: 'successful login',
+      role: user
+    })
   }
   const user = users.find(u =>
   u.username === username && u.password === password);
