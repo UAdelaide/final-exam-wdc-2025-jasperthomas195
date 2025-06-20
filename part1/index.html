@@ -10,13 +10,13 @@
         <h1>Dog of the day!</h1>
 
         <div v-if="!imageShown">
-        <button @click="pressButton(0)" :disabled="buttons[0]">Press to see dog</button>
-        <button @click="pressButton(1)" :disabled="buttons[1]">Press to see dog</button>
-        <button @click="pressButton(2)" :disabled="buttons[2]">Press to see dog</button>
-        <button @click="pressButton(3)" :disabled="buttons[3]">Press to see dog</button>
-        <button @click="pressButton(4)" :disabled="buttons[4]">Press to see dog</button>
-        <button @click="pressButton(5)" :disabled="buttons[5]">Press to see dog</button>
-        <button @click="pressButton(6)" :disabled="buttons[6]">Press to see dog</button>
+        <button @click="pressButton(0)" :disabled="buttons[0]"></button>
+        <button @click="pressButton(1)" :disabled="buttons[1]"></button>
+        <button @click="pressButton(2)" :disabled="buttons[2]"></button>
+        <button @click="pressButton(3)" :disabled="buttons[3]"></button>
+        <button @click="pressButton(4)" :disabled="buttons[4]"></button>
+        <button @click="pressButton(5)" :disabled="buttons[5]"></button>
+        <button @click="pressButton(6)" :disabled="buttons[6]"></button>
         </div>
 
         <div v-if="imageShown">
