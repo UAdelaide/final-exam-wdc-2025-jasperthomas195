@@ -103,8 +103,9 @@ app.get('api/walkrequests/open', async function(req,res) {
         `);
         res.json(requests);
     } catch (err) {
-        res.status(500).json({ error: 'Error getting walk request data'})
+        res.status(500).json({error: 'Error getting walk request data'});
     }
+});
 
 
 
