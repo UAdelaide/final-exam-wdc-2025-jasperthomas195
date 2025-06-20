@@ -127,7 +127,7 @@ app.get('api/walkers/summary/', async function(req, res) {
         GROUP BY walker.user_id
         `);
         res.json(summary);
-        } catch
+    } catch (err) {
     res.status(500).json({error: 'Error getting walker summary data'});
     }
 }
