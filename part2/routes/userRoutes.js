@@ -76,10 +76,12 @@ router.post('/login', async (req, res) => {
 
 // define route to get all the dogs belonging to specific owners
 router.get('/user-dogs', async (req, res) => {
+  // check if the user is logged in
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.status(401).json({ error: 'unauthorised'});
   }
   try {
+    // get the user's id
     const ownerId = req.session.user.id;
     const [rows] = await db.query(
       'SELECT dog_id, name, size FROM Dogs WHERE owner_id = ?',
