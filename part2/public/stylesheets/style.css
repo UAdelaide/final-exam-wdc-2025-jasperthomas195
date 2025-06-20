@@ -27,14 +27,6 @@ header .logo {
     width: 150px;
 }
 
-.card {
-    background: #fff;
-    border-radius: 16px;
-    margin: 60px auto;
-    padding: 40px 32px 32px 32px;
-    max-width: 480px;
-}
-
 header ul {
     display: inline-block;
     list-style: none;
