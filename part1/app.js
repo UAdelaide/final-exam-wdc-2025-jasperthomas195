@@ -60,7 +60,8 @@ async function insertData() {
         ((SELECT user_id FROM Users WHERE username = 'jasper'), 'Reggie', 'large')
         `);
 
-    
+      await db.execute(`
+      `)
 
     }
 }
