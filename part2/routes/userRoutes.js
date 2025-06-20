@@ -45,8 +45,10 @@ router.post('/login', async (req, res) => {
     );
 
     if (rows.length === 0) {
-      return res.status(401).json({ error:})
+      return res.status(401).json({ error: "incorrect details"});
     }
+
+    
   }
   const user = users.find(u =>
   u.username === username && u.password === password);
