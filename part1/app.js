@@ -103,7 +103,7 @@ app.get('api/walkrequests/open', async function(req,res) {
         `);
         res.json(requests);
     } catch (err) {
-        
+        res.status(500).json({})
     }
 
 
