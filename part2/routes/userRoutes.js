@@ -42,7 +42,10 @@ router.post('/login', async (req, res) => {
   u.username === username && u.password === password);
 
   if (user) {
-    req.session
+    req.session.user = {
+      id: user.id,
+      username
+    }
   }
 
   try {
