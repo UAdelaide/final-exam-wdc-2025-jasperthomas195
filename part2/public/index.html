@@ -15,7 +15,7 @@
 
     <div>
       <h2 class="h4 mb-3">Login</h2>
-      <!-- new error message -->
+      <!-- new error message-->
       <div v-if="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
       <form @submit.prevent="login">
         <div class="mb-3">
@@ -38,7 +38,6 @@
     const { createApp } = Vue;
     createApp({
       data() {
-        <!-- new error message -->
         return {
           message: 'Welcome to the Dog Walking Service!',
           username: '',
