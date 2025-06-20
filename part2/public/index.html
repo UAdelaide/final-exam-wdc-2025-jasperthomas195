@@ -12,11 +12,11 @@
   <div id="app" class="container py-5">
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <form @submit.prevent="login">
-      <div class="mb-4">
+      <div class="mb-3">
         <label class="form-label">Username</label>
         <input v-model="loginForm.username" type="text" class="form-control" required>
       </div>
-      <div class="mb-4">
+      <div class="mb-3">
         <label class="form-label">Password</label>
         <input v-model="loginForm.password" type="password" class="form-control" required>
       </div>
