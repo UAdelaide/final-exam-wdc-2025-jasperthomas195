@@ -50,7 +50,7 @@ async function insertData() {
         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
         ('lebronjames', 'lebron@example.com', 'hashed321', 'walker'),
         ('jasper', 'jasper@example.com', 'hashed987', 'owner')
-        
+    
 
     }
 }
