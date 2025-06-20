@@ -1,4 +1,5 @@
 INSERT INTO Users (username, email, password_hash, role) VALUES
+('alice123', 'alice@example.com', 'hashed123', 'owner'),
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('lebronjames', 'lebron@example.com', 'hashed321', 'walker'),
@@ -16,4 +17,4 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 ((SELECT dog_id FROM Dogs WHERE name = 'Bella' AND owner_id = (select user_id FROM Users WHERE username = 'carol123')), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Spot' AND owner_id = (select user_id FROM Users WHERE username = 'jasper')), '2025-07-10 10:30:00', 15, 'Glenelg', 'open'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Reggie' AND owner_id = (select user_id FROM Users WHERE username = 'jasper')), '2025-08-10 11:30:00', 55, 'Elizabeth', 'accepted'),
-((SELECT dog_id FROM Dogs WHERE name = 'Reggie' AND owner_id = (select user_id FROM Users WHERE username = 'lebronjames')), '2025-09-10 12:30:00', 60, 'Glenunga', 'open'),
+((SELECT dog_id FROM Dogs WHERE name = 'Reggie' AND owner_id = (select user_id FROM Users WHERE username = 'lebronjames')), '2025-09-10 12:30:00', 60, 'Glenunga', 'open');
