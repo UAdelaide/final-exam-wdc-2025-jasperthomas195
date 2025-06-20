@@ -75,7 +75,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/user-dogs', async (req, res) => {
-  if (!req.)
+  if (!req.session.user || req.session.user.role !== 'owner')
 
 router.get('/', async (req, res) => {
   try {
