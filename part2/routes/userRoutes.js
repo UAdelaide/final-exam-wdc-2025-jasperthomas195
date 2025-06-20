@@ -80,7 +80,11 @@ router.get('/user-dogs', async (req, res) => {
   }
   try {
     const ownerId = req.session.user.id;
-    const [rows] = await db.query
+    const [rows] = await db.query(
+      'SELECT dog_id, name, size FROM Dogs WHERE owner_id = ?',
+      [ownerId]
+    );
+    
   }
 
 router.get('/', async (req, res) => {
