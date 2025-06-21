@@ -94,7 +94,7 @@
           this.errorMessage = 'Login failed'; // catch error in case there is server or network error
         }
       },
-      async loadDogs () {
+      async mounted () {
         try {
           // get the dog data from the api
           const res = await fetch('/api/dogs');
