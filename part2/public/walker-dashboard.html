@@ -86,6 +86,7 @@
             if (!response.ok) {
               throw new error('error getting current user:')
             }
+            // parse the user object from the response, and then return it
             const user = await response.json();
             return user;
           } catch (error) {
