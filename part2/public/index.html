@@ -105,7 +105,10 @@
               const imageDog = await
               fetch('https://dog.ceo/api/breeds/image/random');
               const imageData = await imageDog.json();
-              dog.image = imageData
+              dog.image = imageData.message;
+            } catch {
+              
+
             }
           }
 
