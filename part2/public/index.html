@@ -107,7 +107,7 @@
               const imageData = await imageDog.json();
               dog.image = imageData.message;
             } catch {
-              dog.image
+              dog.image = 'dog photo';
             }
             }
           }
