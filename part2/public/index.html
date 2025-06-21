@@ -93,27 +93,7 @@
         }
       }
     },
-      async mounted () {
-        try {
-          // get the dog data from the api
-          const res = await fetch('/api/dogs');
-          let dogs = await res.json();
 
-          for (let dog of dogs) {
-            try {
-              const imageDog = await
-              fetch('https://dog.ceo/api/breeds/image/random');
-              const imageData = await imageDog.json();
-              dog.image = imageData.message;
-            } catch (error) {
-              dog.image = 'dog photo';
-            }
-          }
-          this.dogs = dogs;
-        } catch (error) {
-          this.errorMessage = 'failed to load dogs'
-        }
-      }
     }).mount('#app');
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
