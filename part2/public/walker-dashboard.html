@@ -81,6 +81,7 @@
         // implement new function to get the current user's information from the backend
         async function getCurrentUser() {
           try {
+            // send get request to get the user data
             const response = await fetch('/api/users/me');
             if (!response.ok) {
               throw new error('error getting current user:')
