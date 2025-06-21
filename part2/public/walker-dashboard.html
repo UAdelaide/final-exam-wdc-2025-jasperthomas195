@@ -66,7 +66,7 @@
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ walker_id: currentUser.id }) // changed user to currentUser.id 
+              body: JSON.stringify({ walker_id: currentUser.id }) // changed user to currentUser.id for dynamic application
             });
             const result = await res.json();
 
