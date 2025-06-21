@@ -80,7 +80,10 @@
 
         async function getCurrentUser() {
           try {
-            const response = await fetch('/api/users/me')
+            const response = await fetch('/api/users/me');
+            if (!response.ok) {
+              throw new error('')
+            }
           }
         }
 
