@@ -89,7 +89,7 @@
             const user = await response.json();
             return user;
           } catch (error) {
-            // log errors to show 
+            // log errors to show where the error is
             console.error('error getting current user/2:', error);
             return null;
           }
