@@ -82,8 +82,9 @@
           try {
             const response = await fetch('/api/users/me');
             if (!response.ok) {
-              throw new error('')
+              throw new error('error getting current user:')
             }
+            const user = await response.json
           }
         }
 
