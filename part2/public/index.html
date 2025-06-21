@@ -104,7 +104,8 @@
             try {
               const imageDog = await
               fetch('https://dog.ceo/api/breeds/image/random');
-              const imageData = await im
+              const imageData = await imageDog.json();
+              dog.image = imageData
             }
           }
 
