@@ -112,7 +112,7 @@
           }
           this.dogs = dogs;
         } catch (error) {
-          
+          error.value = 'failed to load dogs'
         }
     }).mount('#app');
   </script>
