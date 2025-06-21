@@ -61,7 +61,7 @@
 
         async function applyToWalk(requestId) {
           try {
-            // 
+            // get the current user's information with the 
             const currentUser = await getCurrentUser();
 
             const res = await fetch(`/api/walks/${requestId}/apply`, {
