@@ -84,7 +84,10 @@
             if (!response.ok) {
               throw new error('error getting current user:')
             }
-            const user = await response.json
+            const user = await response.json();
+            return user;
+          } catch (error) {
+            
           }
         }
 
