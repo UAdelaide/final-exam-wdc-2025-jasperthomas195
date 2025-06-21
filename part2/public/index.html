@@ -94,6 +94,11 @@
           this.errorMessage = 'Login failed'; // catch error in case there is server or network error
         }
       }
+      async loadDogs () {
+        try {
+          const res = await
+        }
+      }
     }
     }).mount('#app');
   </script>
