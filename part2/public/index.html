@@ -11,7 +11,6 @@
   <div id="app" style="width: 100%; max-width: 650px" class="container py-5">
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <!--styling to contain the username and password-->
-    <div class="card p-4 mb-4" style="max-width: 600px">
       <!--new error message-->
       <div v-if="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
       <form @submit.prevent="login">
@@ -28,7 +27,6 @@
         <!--added a login button-->
         <button type="submit" class="btn btn-primary w-100">Login</button>
       </form>
-      </div>
   </div>
 
   <script>
