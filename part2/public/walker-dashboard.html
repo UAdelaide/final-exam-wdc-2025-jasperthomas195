@@ -69,7 +69,6 @@
               body: JSON.stringify({ walker_id: currentUser.id }) // changed user to currentUser.id for dynamic application
             });
             const result = await res.json();
-
             if (!res.ok) throw new Error(result.error || 'Application failed');
             message.value = result.message;
             error.value = '';
