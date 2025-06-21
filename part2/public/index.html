@@ -96,8 +96,11 @@
       },
       async loadDogs () {
         try {
+          // get the dog data from the api
           const res = await fetch('/api/dogs');
-          let dogs = 
+          let dogs = await res.json();
+
+
         }
       }
     }
