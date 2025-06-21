@@ -78,6 +78,7 @@
           }
         }
 
+        // implement new function to g
         async function getCurrentUser() {
           try {
             const response = await fetch('/api/users/me');
@@ -88,7 +89,7 @@
             return user;
           } catch (error) {
             console.error('error getting current user/2:', error);
-            return
+            return null;
           }
         }
 
